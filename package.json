@@ -1,0 +1,27 @@
+{
+  "name": "cross-chain-poc-wormhole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "index": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.4",
+    "@wormhole-foundation/connect-sdk": "^0.4.6",
+    "@wormhole-foundation/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "ts-node": "^10.9.2"
+  }
+}
