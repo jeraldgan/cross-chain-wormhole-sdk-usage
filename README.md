@@ -21,7 +21,7 @@ Creates a message on the source chain that proves ownership and details of your 
 2. Run:
 
 ```bash
-npm run tsc
+pnpm tsc
 node dist/createAttestation.js
 ```
 
@@ -35,7 +35,7 @@ Registers your token on the destination chain using the proof created in step 1.
 2. Run:
 
 ```bash
-npm run tsc
+pnpm tsc
 node dist/submitAttestation.js
 ```
 
@@ -44,13 +44,14 @@ node dist/submitAttestation.js
 Locks your tokens on the source chain and mints equivalent tokens on the destination chain. The bridge maintains a 1:1 ratio between chains.
 
 ```bash
-npm run tsc
+pnpm tsc
 node dist/sendToken.js
 ```
 
 ## Requirements
 
 - Node.js 16+
+- pnpm
 - Ethereum wallet with funds for gas
 - Solana wallet with funds for fees
 - Source chain tokens to transfer
