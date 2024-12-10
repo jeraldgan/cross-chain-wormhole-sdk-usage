@@ -9,7 +9,7 @@ async function submitAttestation(txId: string) {
   const chain = wh.getChain("Solana");
   const { signer, address } = await getSigner(chain);
   const tokenBridge = await chain.getTokenBridge();
-  const vaa = await wh.getVaa(txId, "TokenBridge:AttestMeta");
+  const vaa = await wh.getVaa(txId, "TokenBridge:AttestMeta", 60 * 1000 * 30);
   if (vaa) {
     const txids = await signSendWait(
       chain,
@@ -23,7 +23,7 @@ async function submitAttestation(txId: string) {
 // Usage
 async function main() {
   await submitAttestation(
-    "0x51ef2c85950765e2480f396d2d9317d08426b8a83b1688b4478cb86504086e4b"
+    "0x678acfe18ca5d544d02d5158d3009ab0c89f71a6133df02ee6fe4e9fd56377cd"
   );
 }
 
